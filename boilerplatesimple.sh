@@ -37,29 +37,17 @@ create_project
 
 edit_settings
 edit_urls
-edit_accounts_urls
-edit_accounts_forms
-edit_accounts_views
-edit_core_urls
-edit_core_views
 create_management_commands
 create_utils
-create_accounts_templates
-create_core_templates
-create_static
 
 echo "${green}>>> Editing core/models.py${reset}"
 cp /tmp/django-boilerplate/core/models.py $PROJECT/core
 
-edit_app_accounts
 edit_app_core
 
 create_app_crm
 edit_app_crm
 edit_crm_mixins
-create_crm_templates
-
-create_app_expense
 
 # Remove comments of settings.py
 sed -i "s/# '$PROJECT.crm.apps.CrmConfig'/'$PROJECT.crm.apps.CrmConfig'/g" $PROJECT/settings.py

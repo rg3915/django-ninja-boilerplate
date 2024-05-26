@@ -26,7 +26,7 @@ python manage.py migrate
 if running [django-seed](https://github.com/Brobin/django-seed) type:
 
 ```
-python manage.py seed crm expense --number=15
+python manage.py seed crm --number=15
 ```
 
 
@@ -59,5 +59,5 @@ python manage.py migrate
 Se quiser rodar o [django-seed](https://github.com/Brobin/django-seed) digite:
 
 ```
-python manage.py seed crm expense --number=15
+python manage.py seed crm --number=15
 ```
