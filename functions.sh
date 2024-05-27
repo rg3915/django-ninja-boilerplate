@@ -166,10 +166,10 @@ add_tests() {
 }
 
 remove_files(){
-    $PROJECT/core/admin.py
-    $PROJECT/core/tests.py
-    $PROJECT/core/views.py
+    rm -f $PROJECT/core/admin.py
+    rm -f $PROJECT/core/tests.py
+    rm -f $PROJECT/core/views.py
 
-    $PROJECT/crm/tests.py
-    $PROJECT/crm/views.py
+    rm -f $PROJECT/crm/tests.py
+    rm -f $PROJECT/crm/views.py
 }
