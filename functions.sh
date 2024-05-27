@@ -1,6 +1,6 @@
 create_readme() {
     echo "${green}>>> Creating README.md${reset}"
-    cp /tmp/django-boilerplate/_README.md README.md
+    cp /tmp/django-ninja-boilerplate/_README.md README.md
 
     sed -i "s/{PYTHON_VERSION}/$PYTHON_VERSION/g" README.md
     sed -i "s/{DJANGO_VERSION}/$DJANGO_VERSION/g" README.md
@@ -41,7 +41,7 @@ install_django() {
 
 create_env_gen() {
     echo "${green}>>> Creating contrib/env_gen.py${reset}"
-    cp -r /tmp/django-boilerplate/contrib/ .
+    cp -r /tmp/django-ninja-boilerplate/contrib/ .
 
     echo "${green}>>> Running contrib/env_gen.py${reset}"
     python contrib/env_gen.py
@@ -63,7 +63,7 @@ create_project() {
 
 edit_settings() {
     echo "${green}>>> Editing settings.py${reset}"
-    cp /tmp/django-boilerplate/settings.py $PROJECT/
+    cp /tmp/django-ninja-boilerplate/settings.py $PROJECT/
 
     # Substitui o nome do projeto.
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/settings.py
@@ -86,43 +86,43 @@ edit_app_crm() {
 
 edit_urls() {
     echo "${green}>>> Editing urls.py${reset}"
-    cp /tmp/django-boilerplate/urls.py $PROJECT/
+    cp /tmp/django-ninja-boilerplate/urls.py $PROJECT/
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/urls.py
 }
 
 create_utils() {
     echo "${green}>>> Editing utils.${reset}"
     mkdir -p $PROJECT/utils
-    cp /tmp/django-boilerplate/utils/* $PROJECT/utils
+    cp /tmp/django-ninja-boilerplate/utils/* $PROJECT/utils
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/core/management/commands/create_data.py
 }
 
 create_management_commands() {
     echo "${green}>>> Editing management/commands.${reset}"
     mkdir -p $PROJECT/core/management/commands
-    cp /tmp/django-boilerplate/core/management/commands/* $PROJECT/core/management/commands
+    cp /tmp/django-ninja-boilerplate/core/management/commands/* $PROJECT/core/management/commands
 }
 
 edit_crm_admin() {
     echo "${green}>>> Editing crm/admin.py${reset}"
-    cp /tmp/django-boilerplate/crm/admin.py $PROJECT/crm
+    cp /tmp/django-ninja-boilerplate/crm/admin.py $PROJECT/crm
 }
 
 edit_crm_models() {
     echo "${green}>>> Editing crm/models.py${reset}"
-    cp /tmp/django-boilerplate/crm/models.py $PROJECT/crm
+    cp /tmp/django-ninja-boilerplate/crm/models.py $PROJECT/crm
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/crm/models.py
 }
 
 edit_crm_schemas() {
     echo "${green}>>> Editing crm/schemas.py${reset}"
-    cp /tmp/django-boilerplate/crm/schemas.py $PROJECT/crm
+    cp /tmp/django-ninja-boilerplate/crm/schemas.py $PROJECT/crm
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/crm/schemas.py
 }
 
 edit_crm_api() {
     echo "${green}>>> Editing crm/api.py${reset}"
-    cp /tmp/django-boilerplate/crm/api.py $PROJECT/crm
+    cp /tmp/django-ninja-boilerplate/crm/api.py $PROJECT/crm
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/crm/api.py
 }
 
