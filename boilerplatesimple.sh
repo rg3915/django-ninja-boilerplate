@@ -47,7 +47,6 @@ edit_app_core
 
 create_app_crm
 edit_app_crm
-edit_crm_mixins
 
 # Remove comments of settings.py
 sed -i "s/# '$PROJECT.crm.apps.CrmConfig'/'$PROJECT.crm.apps.CrmConfig'/g" $PROJECT/settings.py
