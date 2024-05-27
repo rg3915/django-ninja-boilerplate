@@ -36,6 +36,7 @@ create_env_gen
 create_project
 
 edit_settings
+create_api
 edit_urls
 create_management_commands
 create_utils
