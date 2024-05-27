@@ -58,6 +58,7 @@ sed -i "s/# '$PROJECT.crm.apps.CrmConfig'/'$PROJECT.crm.apps.CrmConfig'/g" $PROJ
 # migrate
 python manage.py makemigrations
 python manage.py migrate
+python manage.py clean_pyc
 
 # Confirm if create superuser.
 create_superuser

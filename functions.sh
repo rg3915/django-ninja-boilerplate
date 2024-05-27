@@ -154,9 +154,8 @@ create_app_crm() {
 
 create_superuser() {
     echo "${green}>>> Creating a 'admin' user ...${reset}"
-    echo "${green}>>> The password must contain at least 8 characters.${reset}"
-    echo "${green}>>> Password suggestions: demodemo${reset}"
-    python manage.py createsuperuser --username='admin' --email=''
+    echo "${green}>>> Password suggestions: d${reset}"
+    python manage.py shell_plus -c "User.objects.create_superuser(username='admin', first_name='Admin', password='d')"
 }
 
 add_tests() {
