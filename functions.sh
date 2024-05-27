@@ -162,5 +162,6 @@ create_superuser() {
 add_tests() {
     echo "${green}>>> Adding tests${reset}"
     cp /tmp/django-ninja-boilerplate/pytest.ini $PROJECT/
-    sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/pytest.ini
+    cp -R /tmp/django-ninja-boilerplate/core/tests $PROJECT/core/tests
+    cp -R /tmp/django-ninja-boilerplate/crm/tests $PROJECT/crm/tests
 }
