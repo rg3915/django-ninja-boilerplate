@@ -129,33 +129,37 @@ python manage.py graph_models -a -g -o models.png  # all
 
 ```
 .
-.
-├── contrib
-│   └── env_gen.py
-├── manage.py
-├── myproject
+├── backend
+│   ├── api.py
 │   ├── asgi.py
 │   ├── core
-│   │   ├── admin.py
+│   │   ├── api.py
 │   │   ├── apps.py
 │   │   ├── management
 │   │   │   └── commands
 │   │   │       ├── create_data.py
-│   │   │       └── __init__.py
 │   │   ├── models.py
-│   │   ├── tests.py
+│   │   └── tests
+│   │       └── test_api.py
 │   ├── crm
 │   │   ├── admin.py
 │   │   ├── api.py
 │   │   ├── apps.py
 │   │   ├── models.py
 │   │   ├── schemas.py
-│   │   ├── tests.py
+│   │   └── tests
+│   │       ├── conftest.py
+│   │       └── test_api.py
+│   ├── pytest.ini
 │   ├── settings.py
 │   ├── urls.py
 │   ├── utils
 │   │   ├── progress_bar.py
 │   │   └── utils.py
+│   └── wsgi.py
+├── contrib
+│   └── env_gen.py
+├── manage.py
 ├── README.md
 └── requirements.txt
 ```
