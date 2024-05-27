@@ -163,6 +163,7 @@ add_tests() {
     cp /tmp/django-ninja-boilerplate/pytest.ini $PROJECT/
     cp -R /tmp/django-ninja-boilerplate/core/tests $PROJECT/core/tests
     cp -R /tmp/django-ninja-boilerplate/crm/tests $PROJECT/crm/tests
+    sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/crm/tests/test_api.py
 }
 
 remove_files(){
