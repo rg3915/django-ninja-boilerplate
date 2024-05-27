@@ -164,3 +164,12 @@ add_tests() {
     cp -R /tmp/django-ninja-boilerplate/core/tests $PROJECT/core/tests
     cp -R /tmp/django-ninja-boilerplate/crm/tests $PROJECT/crm/tests
 }
+
+remove_files(){
+    $PROJECT/core/admin.py
+    $PROJECT/core/tests.py
+    $PROJECT/core/views.py
+
+    $PROJECT/crm/tests.py
+    $PROJECT/crm/views.py
+}

@@ -69,5 +69,8 @@ echo "${green}>>> [Optional] run python manage.py seed crm --number=15${reset}"
 echo "${green}>>> Done${reset}"
 # https://www.gnu.org/software/sed/manual/sed.html
 
+# Remove arquivos não utilizados
+remove_files
+
 # Move this file to /tmp folder.
 mv boilerplatesimple.sh /tmp
