@@ -45,6 +45,7 @@ echo "${green}>>> Editing core/models.py${reset}"
 cp /tmp/django-ninja-boilerplate/core/models.py $PROJECT/core
 
 edit_app_core
+create_core_api
 
 create_app_crm
 edit_app_crm

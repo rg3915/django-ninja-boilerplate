@@ -95,6 +95,12 @@ create_api() {
     sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/api.py
 }
 
+create_core_api() {
+    echo "${green}>>> Creating core/api.py${reset}"
+    cp /tmp/django-ninja-boilerplate/core/api.py $PROJECT/core
+    sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/core/api.py
+}
+
 create_utils() {
     echo "${green}>>> Editing utils.${reset}"
     mkdir -p $PROJECT/utils
