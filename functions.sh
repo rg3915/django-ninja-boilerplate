@@ -55,8 +55,6 @@ create_project() {
     echo "${green}>>> Creating the app 'core' ...${reset}"
     python ../manage.py startapp core
 
-    echo "${green}>>> Creating the app 'accounts' ...${reset}"
-    python ../manage.py startapp accounts
     # up one level
     cd ..
 }

@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.4] - 2021-04-26
+## [1.0.0] - 2024-05-26
 
 ### Changed
 
@@ -21,8 +21,6 @@
 * Core: app `core` contains management commands.
     * hello.py
     * create_data.py
-
-* Accounts: app `accounts` contains login and logout url.
 
 * CRM: app `crm` contains CRUD in Function Based Views.
 
