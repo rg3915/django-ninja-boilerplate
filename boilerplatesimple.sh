@@ -50,9 +50,10 @@ create_core_api
 create_app_crm
 edit_app_crm
 
+add_tests
+
 # Remove comments of settings.py
 sed -i "s/# '$PROJECT.crm.apps.CrmConfig'/'$PROJECT.crm.apps.CrmConfig'/g" $PROJECT/settings.py
-sed -i "s/# '$PROJECT.expense.apps.ExpenseConfig'/'$PROJECT.expense.apps.ExpenseConfig'/g" $PROJECT/settings.py
 
 # migrate
 python manage.py makemigrations
@@ -63,7 +64,7 @@ create_superuser
 
 echo "${red}>>> Important: Dont add .env in your public repository.${reset}"
 echo "${red}>>> KEEP YOUR SECRET_KEY AND PASSWORDS IN SECRET!!!\n${reset}"
-echo "${green}>>> [Optional] run python manage.py seed crm expense --number=15${reset}"
+echo "${green}>>> [Optional] run python manage.py seed crm --number=15${reset}"
 echo "${green}>>> Done${reset}"
 # https://www.gnu.org/software/sed/manual/sed.html
 

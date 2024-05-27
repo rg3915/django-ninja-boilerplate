@@ -25,7 +25,7 @@ install_django() {
     # Install Django
     echo "${green}>>> Installing the Django${reset}"
     pip install -U pip
-    pip install django==$DJANGO_VERSION django-ninja dj-database-url django-extensions django-localflavor django-widget-tweaks isort python-decouple faker ipdb psycopg2-binary
+    pip install django==$DJANGO_VERSION django-ninja dj-database-url django-extensions django-localflavor django-widget-tweaks isort python-decouple faker ipdb psycopg2-binary pytest-django
     pip install git+https://github.com/rg3915/django-seed.git@main
 
     echo Django==$DJANGO_VERSION > requirements.txt
@@ -39,6 +39,7 @@ install_django() {
     pip freeze | grep isort >> requirements.txt
     pip freeze | grep python-decouple >> requirements.txt
     pip freeze | grep psycopg2-binary >> requirements.txt
+    pip freeze | grep pytest-django >> requirements.txt
     pip install ipython[notebook]
 }
 
@@ -156,4 +157,10 @@ create_superuser() {
     echo "${green}>>> The password must contain at least 8 characters.${reset}"
     echo "${green}>>> Password suggestions: demodemo${reset}"
     python manage.py createsuperuser --username='admin' --email=''
+}
+
+add_tests() {
+    echo "${green}>>> Adding tests${reset}"
+    cp /tmp/django-ninja-boilerplate/pytest.ini $PROJECT/
+    sed -i "s/{PROJECT}/$PROJECT/g" $PROJECT/pytest.ini
 }
