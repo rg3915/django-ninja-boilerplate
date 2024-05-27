@@ -2,6 +2,7 @@
 
 * [Python {PYTHON_VERSION}](https://www.python.org/)
 * [Django {DJANGO_VERSION}](https://www.djangoproject.com/)
+* [Django Ninja 1.1.0](https://django-ninja.dev/)
 
 ## How to run project?
 
@@ -14,11 +15,17 @@
 ```
 git clone https://github.com/{USERNAME}/{PROJECT}.git
 cd {PROJECT}
+
 python -m venv .venv
 source .venv/bin/activate
+
 pip install -r requirements.txt
+
 python contrib/env_gen.py
+
 python manage.py migrate
+
+pytest
 ```
 
 ## Django Seed
@@ -34,6 +41,7 @@ python manage.py seed crm --number=15
 
 * [Python {PYTHON_VERSION}](https://www.python.org/)
 * [Django {DJANGO_VERSION}](https://www.djangoproject.com/)
+* [Django Ninja 1.1.0](https://django-ninja.dev/)
 
 ## Como rodar o projeto?
 
@@ -46,11 +54,17 @@ python manage.py seed crm --number=15
 ```
 git clone https://github.com/{USERNAME}/{PROJECT}.git
 cd {PROJECT}
+
 python -m venv .venv
 source .venv/bin/activate
+
 pip install -r requirements.txt
+
 python contrib/env_gen.py
+
 python manage.py migrate
+
+pytest
 ```
 
 
