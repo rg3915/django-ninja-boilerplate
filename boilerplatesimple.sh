@@ -12,7 +12,7 @@ red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
 
-source /tmp/django-boilerplate/functions.sh
+source /tmp/django-ninja-boilerplate/functions.sh
 
 PROJECT=${1:-backend}
 
@@ -27,7 +27,7 @@ echo "${green}>>> The name of the project is '$PROJECT'.${reset}"
 echo "${green}>>> LANGUAGE_CODE is pt-br.${reset}"
 
 echo "${green}>>> Creating .gitignore${reset}"
-cp /tmp/django-boilerplate/.gitignore .
+cp /tmp/django-ninja-boilerplate/.gitignore .
 
 create_readme
 create_virtualenv
@@ -41,7 +41,7 @@ create_management_commands
 create_utils
 
 echo "${green}>>> Editing core/models.py${reset}"
-cp /tmp/django-boilerplate/core/models.py $PROJECT/core
+cp /tmp/django-ninja-boilerplate/core/models.py $PROJECT/core
 
 edit_app_core
 
